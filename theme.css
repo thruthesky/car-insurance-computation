@@ -13,6 +13,10 @@ button::-moz-focus-inner, input[type="button"]::-moz-focus-inner, input[type="su
 	font-size:1.4em;
 	background-color:#c9dfdf;
 }
+.title.form {
+	background-color:#0079b7;
+	color:white;
+}
 .note {
 	padding:0.6em;
 	font-size:1.2em;
@@ -50,8 +54,8 @@ button::-moz-focus-inner, input[type="button"]::-moz-focus-inner, input[type="su
 	width:50%;
 }
 
-.choose-car-brand .price {
-	display:inline-block;
-	padding:0.125em .25em;
-	font-size:1.125em;
+
+
+.search-result span {
+	font-size:0.8em;
 }

@@ -7,6 +7,7 @@
 <head>
 	<meta charset='utf-8'>
 	<link type='text/css' href='theme.css' rel='stylesheet' />
+	<script src='http://code.jquery.com/jquery-1.11.3.min.js'></script>
 </head>
 <body>
 <?php

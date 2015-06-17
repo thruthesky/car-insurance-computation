@@ -169,82 +169,107 @@ function tax_add($sum)
 
 
 ?>
+
+<div class='title form'><?=ln('title form')?></div>
+
 <form>
 <input type='hidden' name='mode' value='submit-computation'>
 
+<table>
 
 <? if ( $unit ) { ?>
-	<div class='unit'>
-		Your Car Model : <?=$unit?>
-		<input type='hidden' name='unit' value='<?=$unit?>'>
-	</div>
+	<tr>
+		<td><?=ln('your car model')?></td>
+		<td><?=$unit?><input type='hidden' name='unit' value='<?=$unit?>'></td>
+	</tr>
 <? } ?>
 
 <? if ( $type ) { ?>
-	<div class='type'>
-		Your Car Type: <?=$type?>
-		<input type='hidden' name='type' value='<?=$type?>'>
-	</div>
+	<tr>
+		<td><?=ln('your car type')?></td>
+		<td><?=$type?><input type='hidden' name='type' value='<?=$type?>'></td>
+	</tr>
 <? } ?>
 
+<tr>
+	<td><?=ln('market price')?></td>
+	<td>
+		<input type='text' name='price' value="<?=$price?>">
+		<a href='?action=choose-car-brand'><?=ln('find your car price')?></a>
+	</td>
+</tr>
 
-<div>
-
-
-Market Price
-<input type='text' name='price' value="<?=$price?>">
-<a href='?action=choose-car-brand'>Find Your Car Price</a>
-
-</div>
-
-
-<div>
-	Year of Model : <input type='text' name='year' value="<?=$year?>">
-		
-</div>
+<tr>
+	<td><?=ln('year of model')?></td>
+	<td><input type='text' name='year' value="<?=$year?>"></td>
+</tr>
 
 
-<div>
-	Type :
+
+<tr>
+	<td><?=ln('type')?></td>
+	<td>
 		<input type='radio' name='subline' value='PC' <? if ( $subline == 'PC' ) echo 'checked=1'; ?>> PC
 		<input type='radio' name='subline' value='CV' <? if ( $subline == 'CV' ) echo 'checked=1'; ?>> PV &amp; CV
-</div>
-
-<div>
-	Coverage of Property Damage
-	<select name='pd'>
-		<?=option_coverage($pd)?>
-	</select>
-</div>
-
-<div>
-	Coverage of Body Injury
-	<select name='bi'>
-		<?=option_coverage($bi)?>
-	</select>
-</div>
+	</td>
+</tr>
 
 
-<div>
-	No of Passenger
-	<input type='text' name='passenger' value="<?=$passenger?>">
-</div>
-<div>
-	Coverage Limit per Passenger :
-	<input type='radio' name='pa' value='20000' <? if ( $pa == 20000 ) echo "checked=1"; ?> > 20,000
-	<input type='radio' name='pa' value='50000' <? if ( $pa == 50000 ) echo "checked=1"; ?> > 50,000
-</div>
+
+<tr>
+	<td><?=ln('Coverage of Property Damage')?></td>
+	<td>
+		<select name='pd'>
+			<?=option_coverage($pd)?>
+		</select>
+	</td>
+</tr>
 
 
-<div>
-	Cover Accident of Nature
+<tr>
+	<td><?=ln('Coverage of Body Injury')?></td>
+	<td>
+		<select name='bi'>
+			<?=option_coverage($bi)?>
+		</select>
+	</td>
+</tr>
+<tr>
+	<td><?=ln('No of Passenger')?></td>
+	<td>
+		<input type='text' name='passenger' value="<?=$passenger?>">
+	</td>
+</tr>
+
+
+<tr>
+	<td><?=ln('Coverage Limit per Passenger')?></td>
+	<td>
+		<input type='radio' name='pa' value='20000' <? if ( $pa == 20000 ) echo "checked=1"; ?> > 20,000
+		<input type='radio' name='pa' value='50000' <? if ( $pa == 50000 ) echo "checked=1"; ?> > 50,000
+	</td>
+</tr>
+
+
+<tr>
+	<td><?=ln('Cover Accident of Nature')?></td>
+	<td>
 		<input type='radio' name='aon' value='Y' <? if ( $aon == 'Y' ) echo 'checked=1'; ?>> Yes
 		<input type='radio' name='aon' value='N' <? if ( $aon == 'N' ) echo 'checked=1'; ?>> No
-</div>
+	</td>
+</tr>
 
 
 
-<input type='submit'>
+
+
+<tr>
+	<td></td>
+	<td><input type='submit' value='<?=ln('submit compute')?>'></td>
+</tr>
+
+</table>
+
 </form>
 
 <?php
@@ -257,8 +282,9 @@ Market Price
 		$sum3 = $sum2 + bi_premium( $subline, $bi );
 		$sum4 = $sum3 + pd_premium( $subline, $pd );
 		$sum5 = $sum4 + $pa_premium;
-		$total = tax_add($sum5);
-		echo $total;
+		$total = number_format(round(tax_add($sum5)));
+		$ln = ln('comment total');
+		echo "<div class='note result'>$ln $total</div>";
 	}
 
 ?>
@@ -267,6 +293,20 @@ Market Price
 
 
 <ul>
+
+<li> 자동차 및 각종 보험에 대해 궁금하시면 필고 컨설팅 : 070-7529-1749 로 연락주십시오.
+
+<li> 자연재해 AON(Act Of Nature)는 지진과 자연재해를 말하는데, 필리핀에서는 '홍수'로 인한 침수가 일반적입니다.
+자연재해 옵션을 선택하는 것과 하지 않는 것에 비용 차이가 다소 큽니다.
+
+<li> 2008 년식 이전의 차량은 가급적 '자동차 모델 검색'을 통해서 검색을 해 주십시오.
+
+<li> 손상 배상액과 신체 손상 배상액은 각 각 10 만 페소 정도가 적당합니다.
+
+따라서 홍수 지역에 거주하지 않는다면 자연재해 옵션은 권장하지 않습니다.
+
+
+
 
 <li> PC – Private Car
 	like Sedan (e.g., Toyota Vios, Mits. Lancer, Ford Focus, Honda Civic)
@@ -282,3 +322,28 @@ Market Price
 				
 
 </ul>
+
+<script>
+		var $ = jQuery;
+		var resize_count = 0;
+		$(window).load(function () {
+			resize_iframe();
+		});
+		$(function(){
+			//resize_iframe();
+			setTimeout(function () { resize_iframe(); }, 500);	// resize after 1 second for sure.
+			setTimeout(function () { resize_iframe(); }, 3000);	// resize after 3 seconds for sure.
+			setTimeout(function () { resize_iframe(); }, 5000);	// resize after 5 seconds for sure.
+			setTimeout(function () { resize_iframe(); }, 15000);	// resize after 15 seconds for sure.
+			//setTimeout(function () { resize_iframe(); }, 30000);	// resize after 30 seconds for sure.
+			setTimeout(function () { resize_iframe(); }, 60000);	// resize after 1 MINUTE for sure.
+			// if it takes more than 1 minute, then let's assume that the internet is too slow.
+		});
+		function resize_iframe()
+		{
+			resize_count ++;
+			var height = $(document).height();
+			var data = { 'code' : 'resize', 'height': height, 'count': resize_count };
+			parent.postMessage( data, '*' );
+		}
+	</script>
