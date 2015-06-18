@@ -299,23 +299,22 @@ function tax_add($sum)
 
 <ul>
 
-<li> 자동차 및 각종 보험에 대해 궁금하시면 필고 컨설팅 : 070-7529-1749 로 연락주십시오.
+<li> 자동차 및 각종 보험에 대해 궁금하시면 필고 컨설팅 : (한국) 070-7529-1749, 필리핀(045-322-4133)으로 연락주십시오.
 
 <li> 자연재해 AON(Act Of Nature)는 지진과 자연재해를 말하는데, 필리핀에서는 '홍수'로 인한 침수가 일반적입니다.
 자연재해 옵션을 선택하는 것과 하지 않는 것에 비용 차이가 다소 큽니다.
 
 <li> 2008 년식 이전의 차량은 가급적 '자동차 모델 검색'을 통해서 검색을 해 주십시오.
 
-<li> 손상 배상액과 신체 손상 배상액은 각 각 10 만 페소 정도가 적당합니다.
+<li> 손상 배상액과 신체 손상 배상액은 각 각 10 만 페소 정도가 적당합니다. 하지만 이 금액을 조금 더 올려도 전체 납부 비용에 큰 차이가 없으므로 10만페소에서 20만 페소로 설정하시면 됩니다.
 
 따라서 홍수 지역에 거주하지 않는다면 자연재해 옵션은 권장하지 않습니다.
-
-
 
 
 <li> PC – Private Car
 	like Sedan (e.g., Toyota Vios, Mits. Lancer, Ford Focus, Honda Civic)
 	or like hatch body type.
+	
 <li> PV - Private Vehicle.
 <li> CV – Commercial Vehicle.  The vehicles under this classifications are SUVs,  vans, pick-ups, wagons and AUVs
 

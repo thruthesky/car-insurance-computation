@@ -82,7 +82,7 @@ $language['ko']['Cover Accident of Nature'] = '자연재해';
 
 
 $language['en']['submit compute'] = 'Compute Insurance';
-$language['ko']['submit compute'] = '보험료 계산';
+$language['ko']['submit compute'] = '보험료 계산 070-7893-1741';
 
 
 $language['en']['comment total'] = 'Approximately :';

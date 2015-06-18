@@ -82,6 +82,14 @@ form.computation select {
 	padding:8px;
 	width:10em;
 }
+form.computation input[type='submit'] {
+	margin:0;
+	padding:8px;
+	width:auto;
+	border:0;
+	color:white;
+	background-color:#808080;
+}
 
 
 .choose-car-brand .value span {
