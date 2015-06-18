@@ -175,32 +175,29 @@ function tax_add($sum)
 <div class='image'><img src='form-title.png'></div>
 <div class='line' style='clear:both;'></div>
 </div>
-<div class='form note'>
-알림 : 본 '자동자 종합 보험 견적서'는 이용자 편의를 위해서 필고에서 제공하는 임시 견적서이며
-실제 견적서는 본 양식과 틀릴 수 있으며 계산 방식에 따라 비용의 차이가 있을 수 있습니다. 
-</div>
+<div class='form note'><?=ln('form note')?></div>
 
-<form>
+<form class='computation'>
 <input type='hidden' name='mode' value='submit-computation'>
 
 <table>
 
 <? if ( $unit ) { ?>
 	<tr>
-		<td><?=ln('your car model')?></td>
+		<td><span class='caption'><?=ln('your car model')?></span></td>
 		<td><?=$unit?><input type='hidden' name='unit' value='<?=$unit?>'></td>
 	</tr>
 <? } ?>
 
 <? if ( $type ) { ?>
 	<tr>
-		<td><?=ln('your car type')?></td>
+		<td><span class='caption'><?=ln('your car type')?></span></td>
 		<td><?=$type?><input type='hidden' name='type' value='<?=$type?>'></td>
 	</tr>
 <? } ?>
 
 <tr>
-	<td><?=ln('market price')?></td>
+	<td><span class='caption'><?=ln('market price')?></span></td>
 	<td>
 		<input type='text' name='price' value="<?=$price?>">
 		<a href='?action=choose-car-brand'><?=ln('find your car price')?></a>
@@ -208,14 +205,14 @@ function tax_add($sum)
 </tr>
 
 <tr>
-	<td><?=ln('year of model')?></td>
+	<td><span class='caption'><?=ln('year of model')?></span></td>
 	<td><input type='text' name='year' value="<?=$year?>"></td>
 </tr>
 
 
 
 <tr>
-	<td><?=ln('type')?></td>
+	<td><span class='caption'><?=ln('type')?></span></td>
 	<td>
 		<input type='radio' name='subline' value='PC' <? if ( $subline == 'PC' ) echo 'checked=1'; ?>> PC
 		<input type='radio' name='subline' value='CV' <? if ( $subline == 'CV' ) echo 'checked=1'; ?>> PV &amp; CV
@@ -225,7 +222,7 @@ function tax_add($sum)
 
 
 <tr>
-	<td><?=ln('Coverage of Property Damage')?></td>
+	<td><span class='caption'><?=ln('Coverage of Property Damage')?></span></td>
 	<td>
 		<select name='pd'>
 			<?=option_coverage($pd)?>
@@ -235,7 +232,7 @@ function tax_add($sum)
 
 
 <tr>
-	<td><?=ln('Coverage of Body Injury')?></td>
+	<td><span class='caption'><?=ln('Coverage of Body Injury')?></span></td>
 	<td>
 		<select name='bi'>
 			<?=option_coverage($bi)?>
@@ -243,7 +240,7 @@ function tax_add($sum)
 	</td>
 </tr>
 <tr>
-	<td><?=ln('No of Passenger')?></td>
+	<td><span class='caption'><?=ln('No of Passenger')?></span></td>
 	<td>
 		<input type='text' name='passenger' value="<?=$passenger?>">
 	</td>
@@ -251,7 +248,7 @@ function tax_add($sum)
 
 
 <tr>
-	<td><?=ln('Coverage Limit per Passenger')?></td>
+	<td><span class='caption'><?=ln('Coverage Limit per Passenger')?></span></td>
 	<td>
 		<input type='radio' name='pa' value='20000' <? if ( $pa == 20000 ) echo "checked=1"; ?> > 20,000
 		<input type='radio' name='pa' value='50000' <? if ( $pa == 50000 ) echo "checked=1"; ?> > 50,000
@@ -260,7 +257,7 @@ function tax_add($sum)
 
 
 <tr>
-	<td><?=ln('Cover Accident of Nature')?></td>
+	<td><span class='caption'><?=ln('Cover Accident of Nature')?></span></td>
 	<td>
 		<input type='radio' name='aon' value='Y' <? if ( $aon == 'Y' ) echo 'checked=1'; ?>> Yes
 		<input type='radio' name='aon' value='N' <? if ( $aon == 'N' ) echo 'checked=1'; ?>> No

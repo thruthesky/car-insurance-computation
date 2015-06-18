@@ -18,6 +18,12 @@ $language['ko']['note choose a car'] = "
 ";
 
 
+
+
+$language['en']['form note'] = "Note: We provide this 'Car Insurance Computation From' for your convinience. This form is different from the actual Statement of Account and the amount may differ depending on the conditions.";
+$language['ko']['form note'] = "알림 : 본 '자동자 종합 보험 견적서'는 이용자 편의를 위해서 필고에서 제공하는 임시 견적서이며
+실제 견적서는 본 양식과 틀릴 수 있으며 계산 방식에 따라 비용의 차이가 있을 수 있습니다.";
+
 $language['en']['search your car'] = 'Please, search your car.';
 $language['ko']['search your car'] = '차종을 검색하십시오.';
 
@@ -30,7 +36,7 @@ $language['ko']['submit cancel'] = '취소';
 $language['en']['select price'] = 'Please select the price of the car';
 $language['ko']['select price'] = '자동차 모델의 년도에 해당하는 금액을 클릭하십시오.';
 
-$language['en']['title form'] = 'Car Insurance Computation';
+$language['en']['title form'] = 'Car Insurance';
 $language['ko']['title form'] = '자동차 종합 보험 견적서';
 
 $language['en']['your car model'] = 'Your Car Model';

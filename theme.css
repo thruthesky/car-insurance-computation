@@ -33,6 +33,7 @@ button::-moz-focus-inner, input[type="button"]::-moz-focus-inner, input[type="su
 }
 
 
+
 .note {
 	padding:0.6em;
 	font-size:1.2em;
@@ -55,6 +56,33 @@ button::-moz-focus-inner, input[type="button"]::-moz-focus-inner, input[type="su
 }
 .value {
 }
+
+
+
+form.computation {
+}
+
+
+form.computation .caption {
+	display:block;
+	padding:10px;
+	font-size:9pt;
+	background-color:#c4d5e5;
+	color:#342360;
+}
+
+
+form.computation input[type='text'] {
+	margin:0;
+	padding:8px;
+	width:10em;
+}
+form.computation select {
+	margin:0;
+	padding:8px;
+	width:10em;
+}
+
 
 .choose-car-brand .value span {
 	display:inline-block;
