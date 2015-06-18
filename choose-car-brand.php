@@ -107,9 +107,17 @@ function get_data() {
 			if ( ! isset($brands[$brand]) ) $brands[$brand] = 0;
 			$brands[$brand] ++;
 			$datas[] = $data;
+			
+			if ( !isset($body_types[$data[14]]) ) $body_types[$data[14]] = 0;
+			$body_types[$data[14]]++;
 		}
 		fclose($handle);
 	}
+	/*
+	echo "<pre>";
+	print_r($body_types);
+	echo "</pre>";
+	*/
 	return array($brands, $datas);
 }
 

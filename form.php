@@ -33,9 +33,32 @@ else $mode = null;
 if ( isset($_GET['aon']) ) $aon = $_GET['aon'];
 else $aon = null;
 
-
-
-
+if ( $type == 'VAN' ) $subline = 'PV';
+else if ( $type == 'COUPE' ) $subline = 'PC';
+else if ( $type == 'HATCHBACK' ) $subline = 'PC';
+else if ( $type == 'SEDAN' ) $subline = 'PC';
+else if ( $type == 'ROADSTER' ) $subline = 'PC';
+else if ( $type == 'WAGON' ) $subline = 'PC';
+else if ( $type == 'SUV' ) $subline = 'PV';
+else if ( $type == 'PICK-UP' ) $subline = 'PV';
+else if ( $type == 'PICK UP' ) $subline = 'PV';
+else if ( $type == 'PICKUP' ) $subline = 'PV';
+else if ( $type == 'NOTCHBACK' ) $subline = 'PC';
+else if ( $type == 'IMPORTED SUV' ) $subline = 'PV';
+else if ( $type == 'AUV' ) $subline = 'PV';
+else if ( $type == 'CAB & CHASIS' ) $subline = 'PC';
+else if ( $type == 'VAN' ) $subline = 'PV';
+else if ( $type == 'MPV' ) $subline = 'PV';
+else if ( $type == 'SAEDAN' ) $subline = 'PC';
+else if ( $type == 'MINIVAN' ) $subline = 'PV';
+else if ( $type == 'TRUCK' ) $subline = 'PV';
+else if ( $type == 'DROPSIDE' ) $subline = 'PV';
+else if ( $type == 'COMPACT CAR' ) $subline = 'PC';
+else if ( $type == 'HATCHABACK' ) $subline = 'PC';
+else if ( $type == '2DR' ) $subline = 'PC';
+else if ( $type == '2 DOOR COUPE' ) $subline = 'PC';
+else if ( $type == 'URVAN' ) $subline = 'PV';
+else if ( $type == 'CONV' ) $subline = 'PC';
 
 $options_coverage = array();
 $options_coverage[] = 50000;
@@ -107,11 +130,15 @@ $bi_premium[1000000]['CV'] = 1050;
 function pd_premium($subline, $pd)
 {
 	global $pd_premium;
+	
+	if ( $subline == 'PV' ) $subline = 'PC';
+	
 	return $pd_premium[$pd][$subline];
 }
 function bi_premium($subline, $bi)
 {
 	global $bi_premium;
+	if ( $subline == 'PV' ) $subline = 'PC';
 	return $bi_premium[$bi][$subline];
 }
 
@@ -142,7 +169,7 @@ function product_rate($year, $subline, $aon)
 			if ( $aon == 'Y' ) return 2.3;
 			else return 2;
 		}
-		else if ( $subline == 'CV' ) {
+		else if ( $subline == 'CV' || $subline == 'PV' ) {
 			if ( $aon == 'Y' ) return 1.7;
 			else return 1.3;
 		}
@@ -153,7 +180,7 @@ function product_rate($year, $subline, $aon)
 			if ( $aon == 'Y' ) return 2.75;
 			else return 2.25;
 		}
-		else if ( $subline == 'CV' ) {
+		else if ( $subline == 'CV' || $subline == 'PV') {
 			if ( $aon == 'Y' ) return 2.1;
 			else return 1.6;
 		}
@@ -215,7 +242,8 @@ function tax_add($sum)
 	<td><span class='caption'><?=ln('type')?></span></td>
 	<td>
 		<input type='radio' name='subline' value='PC' <? if ( $subline == 'PC' ) echo 'checked=1'; ?>> PC
-		<input type='radio' name='subline' value='CV' <? if ( $subline == 'CV' ) echo 'checked=1'; ?>> PV &amp; CV
+		<input type='radio' name='subline' value='PV' <? if ( $subline == 'PV' ) echo 'checked=1'; ?>> PV
+		<input type='radio' name='subline' value='CV' <? if ( $subline == 'CV' ) echo 'checked=1'; ?>> CV
 	</td>
 </tr>
 
@@ -283,12 +311,27 @@ function tax_add($sum)
 		
 		$pr = product_rate($year, $subline, $aon);
 		$pa_premium = pa_premium( $passenger, $pa );
+		$bi_premium = bi_premium( $subline, $bi );
+		$pd_premium = pd_premium( $subline, $pd );
 		$sum2 = $price * $pr / 100;
-		$sum3 = $sum2 + bi_premium( $subline, $bi );
-		$sum4 = $sum3 + pd_premium( $subline, $pd );
+		$sum3 = $sum2 + $bi_premium;
+		$sum4 = $sum3 + $pd_premium;
 		$sum5 = $sum4 + $pa_premium;
 		$total = number_format(round(tax_add($sum5)));
 		$ln = ln('comment total');
+		
+		/*
+		echo "Car Price: $price<br>";
+		echo "Premium Rate: $pr<br>";
+		echo "BI Premium: $bi_premium ( $bi )<br>";
+		echo "PD Premium: $pd_premium ( $pd )<br>";
+		echo "PA Premium: $pa_premium ( $pa )<br>";echo "SUM 5: $sum5<br>";
+		
+		*/
+		
+		
+		
+		
 		echo "<div class='note result'>$ln $total</div>";
 	}
 
