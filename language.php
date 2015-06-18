@@ -10,9 +10,9 @@ $language['en']['note choose a car'] = 'If the year of the model of your car is 
 $language['ko']['note choose a car'] = "
 	
 	<ul>
+		<li> 본 자료는 2015년 필리핀의 Mapfre 자동차 보험 회사가 제공한 평균 시장 가격입니다.
 		<li> 자동차의 년식이 2007 년 이하이면 수동으로 양식을 채워서 계산해야 합니다.
-		<li> 자동차 모델을 입력하십시오. 예) starex, carnival, camry
-		<li> 또는 자동차 회사명을 선택 하셔도 됩니다.
+		<li> 자동차 모델(예: starex, carnival, camry)하시거나 자동차 회사명을 선택하십시오.
 	</ul>
 	
 ";
@@ -30,8 +30,8 @@ $language['ko']['submit cancel'] = '취소';
 $language['en']['select price'] = 'Please select the price of the car';
 $language['ko']['select price'] = '자동차 모델의 년도에 해당하는 금액을 클릭하십시오.';
 
-$language['en']['title form'] = 'Car Insurance Computation ( VIY Consultancy : 045-322-4133 )';
-$language['ko']['title form'] = '자동차 종합 보험 ( 필고 컨설팅 : 070-7529-1749 )';
+$language['en']['title form'] = 'Car Insurance Computation';
+$language['ko']['title form'] = '자동차 종합 보험 견적서';
 
 $language['en']['your car model'] = 'Your Car Model';
 $language['ko']['your car model'] = '자동차 모델';

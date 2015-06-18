@@ -1,4 +1,6 @@
 body {
+	margin:0;
+	padding:0;
 	font-size:10pt;
 	font-family: 'Malgun Gothic', Gulim,GulimChe,Dotum;
 }
@@ -14,15 +16,36 @@ button::-moz-focus-inner, input[type="button"]::-moz-focus-inner, input[type="su
 	background-color:#c9dfdf;
 }
 .title.form {
-	background-color:#0079b7;
-	color:white;
+	padding:0 0 1em;
+	background-color:white;
+	color:blue;
 }
+.title.form .text {
+	padding-top:0.4em;
+	float:left;
+	color:#342360;
+}
+.title.form .image {
+	float:right;
+}
+.title.form .line {
+	border-bottom:1px solid grey;
+}
+
+
 .note {
 	padding:0.6em;
 	font-size:1.2em;
 	background-color:#e9e9e9;
 }
 
+
+.form.note {
+	margin-bottom:1.4em;
+	background-color:#473577;
+	color:white;
+	font-size:10pt;
+}
 
 .caption {
 	color:blue;

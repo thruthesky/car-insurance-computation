@@ -170,7 +170,15 @@ function tax_add($sum)
 
 ?>
 
-<div class='title form'><?=ln('title form')?></div>
+<div class='form title'>
+<div class='text'><?=ln('title form')?></div>
+<div class='image'><img src='form-title.png'></div>
+<div class='line' style='clear:both;'></div>
+</div>
+<div class='form note'>
+알림 : 본 '자동자 종합 보험 견적서'는 이용자 편의를 위해서 필고에서 제공하는 임시 견적서이며
+실제 견적서는 본 양식과 틀릴 수 있으며 계산 방식에 따라 비용의 차이가 있을 수 있습니다. 
+</div>
 
 <form>
 <input type='hidden' name='mode' value='submit-computation'>
