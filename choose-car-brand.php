@@ -67,14 +67,14 @@ else $keyword = null;
 						<td><span><?=$car[$passenger]?></span></td>
 						<td><span><?=$car[$type]?></span></td>
 						<td><span><?=$car[$subline_code]?></span></td>
-						<td><a href="?unit=<?=$car[$unit]?>&passenger=<?=$car[$passenger]?>&type=<?=$car[$type]?>&subline=<?=$car[$subline_code]?>&year=2015&price=<?=$car[$y2015]?>"><span class='price'><? if ( $car[$y2015] ) echo number_format($car[$y2015])?></span></a></td>
-						<td><a href="?unit=<?=$car[$unit]?>&passenger=<?=$car[$passenger]?>&type=<?=$car[$type]?>&subline=<?=$car[$subline_code]?>&year=2014&price=<?=$car[$y2014]?>"><span class='price'><? if ( $car[$y2014] ) echo number_format($car[$y2014])?></span></a></td>
-						<td><a href="?unit=<?=$car[$unit]?>&passenger=<?=$car[$passenger]?>&type=<?=$car[$type]?>&subline=<?=$car[$subline_code]?>&year=2013&price=<?=$car[$y2013]?>"><span class='price'><? if ( $car[$y2013] ) echo number_format($car[$y2013])?></span></a></td>
-						<td><a href="?unit=<?=$car[$unit]?>&passenger=<?=$car[$passenger]?>&type=<?=$car[$type]?>&subline=<?=$car[$subline_code]?>&year=2012&price=<?=$car[$y2012]?>"><span class='price'><? if ( $car[$y2012] ) echo number_format($car[$y2012])?></span></a></td>
-						<td><a href="?unit=<?=$car[$unit]?>&passenger=<?=$car[$passenger]?>&type=<?=$car[$type]?>&subline=<?=$car[$subline_code]?>&year=2011&price=<?=$car[$y2011]?>"><span class='price'><? if ( $car[$y2011] ) echo number_format($car[$y2011])?></span></a></td>
-						<td><a href="?unit=<?=$car[$unit]?>&passenger=<?=$car[$passenger]?>&type=<?=$car[$type]?>&subline=<?=$car[$subline_code]?>&year=2010&price=<?=$car[$y2010]?>"><span class='price'><? if ( $car[$y2010] ) echo number_format($car[$y2010])?></span></a></td>
-						<td><a href="?unit=<?=$car[$unit]?>&passenger=<?=$car[$passenger]?>&type=<?=$car[$type]?>&subline=<?=$car[$subline_code]?>&year=2009&price=<?=$car[$y2009]?>"><span class='price'><? if ( $car[$y2009] ) echo number_format($car[$y2009])?></span></a></td>
-						<td><a href="?unit=<?=$car[$unit]?>&passenger=<?=$car[$passenger]?>&type=<?=$car[$type]?>&subline=<?=$car[$subline_code]?>&year=2008&price=<?=$car[$y2008]?>"><span class='price'><? if ( $car[$y2008] ) echo number_format($car[$y2008])?></span></a></td>
+						<td><a href="?mode=submit-computation&unit=<?=$car[$unit]?>&passenger=<?=$car[$passenger]?>&type=<?=$car[$type]?>&subline=<?=$car[$subline_code]?>&year=2015&price=<?=$car[$y2015]?>"><span class='price'><? if ( $car[$y2015] ) echo number_format($car[$y2015])?></span></a></td>
+						<td><a href="?mode=submit-computation&unit=<?=$car[$unit]?>&passenger=<?=$car[$passenger]?>&type=<?=$car[$type]?>&subline=<?=$car[$subline_code]?>&year=2014&price=<?=$car[$y2014]?>"><span class='price'><? if ( $car[$y2014] ) echo number_format($car[$y2014])?></span></a></td>
+						<td><a href="?mode=submit-computation&unit=<?=$car[$unit]?>&passenger=<?=$car[$passenger]?>&type=<?=$car[$type]?>&subline=<?=$car[$subline_code]?>&year=2013&price=<?=$car[$y2013]?>"><span class='price'><? if ( $car[$y2013] ) echo number_format($car[$y2013])?></span></a></td>
+						<td><a href="?mode=submit-computation&unit=<?=$car[$unit]?>&passenger=<?=$car[$passenger]?>&type=<?=$car[$type]?>&subline=<?=$car[$subline_code]?>&year=2012&price=<?=$car[$y2012]?>"><span class='price'><? if ( $car[$y2012] ) echo number_format($car[$y2012])?></span></a></td>
+						<td><a href="?mode=submit-computation&unit=<?=$car[$unit]?>&passenger=<?=$car[$passenger]?>&type=<?=$car[$type]?>&subline=<?=$car[$subline_code]?>&year=2011&price=<?=$car[$y2011]?>"><span class='price'><? if ( $car[$y2011] ) echo number_format($car[$y2011])?></span></a></td>
+						<td><a href="?mode=submit-computation&unit=<?=$car[$unit]?>&passenger=<?=$car[$passenger]?>&type=<?=$car[$type]?>&subline=<?=$car[$subline_code]?>&year=2010&price=<?=$car[$y2010]?>"><span class='price'><? if ( $car[$y2010] ) echo number_format($car[$y2010])?></span></a></td>
+						<td><a href="?mode=submit-computation&unit=<?=$car[$unit]?>&passenger=<?=$car[$passenger]?>&type=<?=$car[$type]?>&subline=<?=$car[$subline_code]?>&year=2009&price=<?=$car[$y2009]?>"><span class='price'><? if ( $car[$y2009] ) echo number_format($car[$y2009])?></span></a></td>
+						<td><a href="?mode=submit-computation&unit=<?=$car[$unit]?>&passenger=<?=$car[$passenger]?>&type=<?=$car[$type]?>&subline=<?=$car[$subline_code]?>&year=2008&price=<?=$car[$y2008]?>"><span class='price'><? if ( $car[$y2008] ) echo number_format($car[$y2008])?></span></a></td>
 					</tr>
 					<? } ?>
 				<? } ?>

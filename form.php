@@ -16,22 +16,22 @@ else $year = 0;
 if ( isset($_GET['subline']) ) $subline = $_GET['subline'];
 else $subline = null;
 if ( isset($_GET['pd']) ) $pd = $_GET['pd'];
-else $pd = 0;
+else $pd = 1000000;
 if ( isset($_GET['bi']) ) $bi = $_GET['bi'];
-else $bi = 0;
+else $bi = 1000000;
 
 
 if ( isset($_GET['passenger']) ) $passenger = $_GET['passenger'];
 else $passenger = 0;
 if ( isset($_GET['pa']) ) $pa = $_GET['pa'];
-else $pa = 0;
+else $pa = 50000;
 
 if ( isset($_GET['mode']) ) $mode = $_GET['mode'];
 else $mode = null;
 
 
 if ( isset($_GET['aon']) ) $aon = $_GET['aon'];
-else $aon = null;
+else $aon = 'Y';
 
 if ( $type == 'VAN' ) $subline = 'PV';
 else if ( $type == 'COUPE' ) $subline = 'PC';
